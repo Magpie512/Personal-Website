@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Scroll Mod to make smoother transition
+// Scroll Mod to make smoother transition | DONT WORK 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
