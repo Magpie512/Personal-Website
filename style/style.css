@@ -5,6 +5,34 @@
     outline: 2px dotted black;
 }
 
+/* Media Query to change outline color in dark mode */
+
+@media (prefers-color-scheme: dark) {
+    * {
+        background-color: black;
+        color: rgb(68, 219, 88);
+        outline: 2px dotted white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    * {
+        background-color: white;
+        color: black;
+        outline: 2px dotted black;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+}
+
+
+
 html {
     font-family: monospace;
 }
@@ -16,20 +44,26 @@ body {
 header {
     margin-bottom: 20px;
     justify-content: space-between;
-    align-items: right;
     display: flex;
 }
 
 nav {
     display: flex;
     gap: 20px;
-    font-size: 24px;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
     font-weight: bold;
 }
 
 nav a {
     text-decoration: none;
     color: black;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 footer {
