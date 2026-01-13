@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 2px dotted black;
+}
+
+html {
+    font-family: monospace;
+}
+
+body {
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: right;
+    display: flex;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
