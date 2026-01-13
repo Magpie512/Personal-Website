@@ -4,75 +4,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Mars || Home</title>
+    <title>Mars || Home</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
+    <!-- ========== HEADER / NAVIGATION ========== -->
     <header>
         <nav>
-            <div class="logo">
-                <h1>Amara "Mars" Briggs</h1>
-            </div>
-            <ul class="nav-links">
+            <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </ul>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+            </div>
         </nav>
     </header>
 
     <main>
+        <!-- ========== HERO SECTION ========== -->
         <section class="hero">
-            <h2>Welcome to My Personal Website</h2>
-            <p>Hello! I'm Amara "Mars" Briggs, a passionate developer and tech enthusiast. Explore my projects, learn more about me, and feel free to get in touch!</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="accent-line"></div>
+                    <h1>Hey, I'm <span id="mars-trigger" class="clickable-mars">Mars</span></h1>
+                    <p class="pronouns">They/He/She</p>
+                    <p class="subtitle"> Junior Software Developer</p>
+
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/amara-briggs-baab28398/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Magpie512" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:marsbriggs512@gmail.com" target="_blank" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="https://instagram.com/mg.pie" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <img src="img/profile_picture.png" alt="Amara &quot;Mars&quot; Briggs">
+                    </div>
+                </div>
+            </div>
         </section>
-            
-        <section class="about">
-            <h2>About Me</h2>
-            <p>I am a software developer with a love for creating innovative solutions. With experience in various programming languages and frameworks, I enjoy tackling challenging problems and continuously learning new technologies.</p>
+
+        <!-- ========== ABOUT ME SECTION ========== -->
+        <section id="about" class="about-me">
+            <div class="about-container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Hello! I'm <strong>Amara Iona Briggs</strong>, though all my friends call me
+                        <strong>Mars</strong>. I'm a passionate junior software developer who loves creating innovative,
+                        user-centered solutions.</p>
+
+                    <p>With a background in computer science and a genuine enthusiasm for problem-solving, I specialize
+                        in building web applications that seamlessly blend functionality with elegant design. I'm
+                        constantly learning and staying current with emerging technologies.</p>
+
+                    <p>Beyond coding, I volunteer with my schools robotics club and I have a pet robot named Robert. He
+                        is a <a
+                            href="https://www.sunfounder.com/collections/robot-kit-for-arduino-raspberry-pi/products/picrawler-robot-kit"
+                            target="_blank" rel="noopener noreferrer">picrawler from SunFounder</a>.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="projects">
-            <h2>Featured Projects</h2>
-            <ul>
-                <li>
-                    <h3>Project One</h3>
-                    <p>A web application that helps users track their fitness goals.</p>
-                </li>
-                <li>
-                    <h3>Project Two</h3>
-                    <p>An open-source library for data visualization in Python.</p>
-                </li>
-                <li>
-                    <h3>Project Three</h3>
-                    <p>A mobile app that connects local volunteers with community service opportunities.</p>
-                </li>
-            </ul>
+        <!-- ========== PROJECTS SECTION ========== -->
+        <section id="projects" class="projects">
+            <div class="projects-container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/GrizzyGearsLogo.png" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Grizzly Gears</h3>
+                            <p class="project-date">2025 - Present</p>
+                            <p>A Student Mentor with Georgian College's highschool outreach program</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Python</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/project2.jpg" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Calculator</h3>
+                            <p class="project-date">2026</p>
+                            <p>A simple calculator application built with Python</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/project3.jpg" alt="Project 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Project Three</h3>
+                            <p class="project-date"></p>
+                            <p>Full-stack e-commerce platform with real-time features</p>
+                            <div class="project-tags">
+                                <span>Vue.js</span>
+                                <span>Express</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/project4.jpg" alt="Project 4">
+                        </div>
+                        <div class="project-info">
+                            <h3>Project Four</h3>
+                            <p>AI-powered data analytics dashboard with visualizations</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>D3.js</span>
+                            </div>
+                            <a href="#" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="submit_form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
+        <!-- ========= TOOLS ============ -->
+        <section id="tools" class="tools">
+            <div class="tools-container">
+                <h2>Technologies</h2>
+                <div class="tools-grid">
+                    <div class="tool-item"><i class="fab fa-html5"></i></div>
+                    <div class="tool-item"><i class="fab fa-css3-alt"></i></div>
+                    <div class="tool-item"><i class="fab fa-js"></i></div>
+                    <div class="tool-item"><i class="fab fa-python"></i></div>
+                    <div class="tool-item"><i class="fab fa-java"></i></div>
+                    <div class="tool-item"><i class="fab fa-github"></i></div>
+                    <div class="tool-item"><i class="fas fa-database"></i></div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- ========== FOOTER ========== -->
     <footer>
         <p>&copy; 2026 Amara Briggs. All rights reserved.</p>
     </footer>
+
+    <!-- ========== MARS PLANET MODAL ========== -->
+    <div id="mars-modal" class="mars-modal">
+        <div class="mars-container">
+            <div class="mars-planet">
+                <div class="mars-surface"></div>
+            </div>
+            <div class="stars"></div>
+        </div>
+    </div>
+</body>
 
 </html>
