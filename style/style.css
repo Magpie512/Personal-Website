@@ -329,11 +329,53 @@ main {
 }
 
 /* ============================================
+    Testimonials Section 
+    ============================================ */
+.testimonials {
+     padding: 100px 60px;
+     background-color: var(--secondary-color);
+}
+
+.testimonials h2 {
+     font-size: 48px;
+     margin-bottom: 60px;
+     color: var(--primary-color);
+     text-align: center;
+}
+
+.testimonial-card {
+     background-color: var(--background-color);
+     border-radius: 8px;
+     padding: 30px;
+     text-align: center;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     cursor: pointer;
+}
+
+.testimonial-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 10px 30px rgba(50, 207, 103, 0.3);
+}
+
+.testimonial-card p {
+     font-style: italic;
+     color: #e0e0e0;
+     margin-bottom: 20px;
+     line-height: 1.6;
+}
+
+.testimonial-card span {
+     font-weight: 600;
+     color: var(--primary-color);
+     font-size: 16px;
+}
+
+/* ============================================
     TOOLS & TECHNOLOGIES SECTION
     ============================================ */
 .tools {
      padding: 100px 60px;
-     background-color: var(--secondary-color);
+     background-color: var(--background-color);
 }
 
 .tools-container {
@@ -403,7 +445,7 @@ main {
 footer {
      padding: 30px;
      text-align: center;
-     background-color: var(--background-color);
+     background-color: var(--secondary-color);
      color: var(--text-color);
 }
 
