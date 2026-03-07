@@ -164,3 +164,8 @@ header::after {
         transform: translateY(0);
     }
 }
+
+@media screen and (max-width: 600px) {
+    .back-button {
+        display: none;
+    }
