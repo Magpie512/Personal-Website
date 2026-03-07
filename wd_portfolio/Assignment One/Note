@@ -1,0 +1,69 @@
+# The CSS Rockstar
+
+## Description
+
+Construct a web page featuring the lyrics of a song that is meaningful to you, using thoughtful typography and layout applied with CSS. Include one or two paragraphs about the song and a short section about the artist or band. Style the page in a way that reflects the visual spirit of the album cover associated with the song.
+
+Your page must use appropriate page‑level sectioning elements and semantically meaningful HTML to structure the content. Choose two typefaces inspired by the album’s typography—one for headings and one for body text. Use a variety of CSS selectors, text‑sizing techniques, and typographic styles to create an attractive, readable layout.
+
+All HTML and CSS must be hand‑built. AI‑generated code is not permitted. Cite any resources used in your code comments.
+
+---
+
+## Instructions
+
+### 1. Song Selection
+- Choose a meaningful song and obtain the official lyrics.
+
+### 2. Project Setup
+- Create a local Git repository (or add an `assignment-1` folder to your existing class repo).
+- Commit regularly throughout development with meaningful commit messages.
+- Push all work to a remote repository such as GitHub.
+
+### 3. HTML Requirements
+- Build a valid, well‑structured HTML page containing:
+  - The song lyrics  
+  - A paragraph about the song  
+  - A paragraph about the artist or band  
+- Use semantic HTML elements such as:
+  - `header`, `main`, `section`, `article`, `aside`, `footer`
+  - `h1`–`h6`, `p`, `blockquote`, `q`, `ul`, `ol`, etc.
+- **Do not** use any classes or IDs in your HTML.
+- Validate your HTML at: https://validator.w3.org/
+
+### 4. CSS Requirements
+- Apply a CSS reset or normalization technique that includes `box-sizing`.
+- Select two appropriate typefaces:
+  - A display font for headings  
+  - A readable body font for lyrics and paragraphs  
+  - (Google Fonts or similar services are allowed.)
+- Use Flexbox, Grid, or both to create a simple, effective layout.
+- Apply typographic techniques learned in class.
+- Add colour and design elements while maintaining strong readability and contrast.
+- Validate your CSS at: https://jigsaw.w3.org/css-validator/
+
+### 5. Documentation
+- Include fine‑print at the bottom of the page with links to any resources used.
+- Ensure your Git history clearly documents your development process.
+
+### 6. Restrictions
+- No 3rd‑party CSS frameworks or themes.
+- Only use HTML/CSS techniques covered in class.
+- All work must comply with Georgian College’s Academic Integrity policies:  
+  https://cat.georgiancollege.ca/academic-regulations/integrity/
+
+---
+
+## Take It Further (Optional Enhancements)
+
+- Add suitable background images.
+- Apply CSS‑powered text effects (for display type only).
+- Add any additional creative touches that enhance the page.
+
+---
+
+## Submitting Your Work
+
+- Upload your completed page and supporting files to a web server.
+- Provide the URL (GitHub Pages is acceptable).
+- Provide the URL to your remote code repository (e.g., GitHub).

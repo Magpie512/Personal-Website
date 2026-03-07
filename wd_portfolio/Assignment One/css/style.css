@@ -1,0 +1,234 @@
+/* Whoever made root deserves infinite medal */
+/* Hey so what did i mean by this */
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #2d2d2d;
+    --accent-color: #d90a0a;
+    --accent-light: #ff4444;
+    --text-light: #f5f5f5;
+    --text-muted: #b0b0b0;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+html {
+    box-sizing: border-box;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: inherit;
+    color: var(--text-light);
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+header {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #b80000 100%);
+    text-align: center;
+    font-size: 150%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: "Permanent Marker", cursive;
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    gap: 25px;
+    flex: 1;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+main > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+main > div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+main > div:nth-of-type(2) > section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-top: 2px solid var(--accent-color);
+    margin-top: auto;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: var(--transition);
+}
+
+aside {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+blockquote {
+    font-style: italic;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+    margin-left: 0;
+    padding-left: 20px;
+    line-height: 2;
+    height:auto;
+    margin: 1em 0;
+    color: var(--text-muted);
+}
+
+/* Tried doing Quote marks but it looked bad */
+
+section {
+    padding: 20px;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    gap: 12px;
+}
+
+main > div > section {
+    flex: 1;
+    min-width: 0;
+}
+
+h2 {
+    margin: 0 0 0.5em 0;
+    line-height: 1.2;
+    font-size: 1.8em;
+    color: var(--accent-light);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+h3 {
+    margin: 0 0 0.5em 0;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    line-height: 1;
+    font-size: 1.4em;
+    color: var(--accent-light);
+}
+
+p {
+    margin: 0;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    line-height: 1.7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-muted);
+    font-size: 0.95em;
+}
+
+/* Mobile layout so it doesnt look like dookie when i preview it in live preview */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4em;
+        padding: 10px;
+    }
+
+    header {
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    main {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    main > div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main > div:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        min-width: 100%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+small {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

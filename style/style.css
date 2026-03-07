@@ -178,10 +178,6 @@ main {
 /* ============================================
     ABOUT ME SECTION
     ============================================ */
-.about-me {
-     padding: 100px 60px;
-     background-color: var(--secondary-color);
-}
 
 .about-container {
      max-width: 900px;
@@ -333,7 +329,6 @@ main {
     ============================================ */
 .testimonials {
      padding: 100px 60px;
-     background-color: var(--secondary-color);
 }
 
 .testimonials h2 {
@@ -764,4 +759,18 @@ footer {
      50% {
           opacity: 1;
      }
+}
+
+
+/* Colour Mod */
+section:nth-child(even) {
+     background-color: var(--secondary-color);
+}
+
+section:nth-child(odd) {
+     background-color: var(--background-color);
+}
+
+section {
+     padding: 100px 60px;
 }

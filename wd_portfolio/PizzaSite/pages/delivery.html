@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enzo's Pizzeria - Delivery</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <script src="/scripts/delivery.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="../index.html" title="Return to the homepage">Enzo's Pizzeria</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Menu</a></li>
+        <li><a href="../pages/our-story.html">Our Story</a></li>
+        <li><a href="../pages/reviews.html">Reviews</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="delivery-info" class="info-section">
+      <div class="container">
+        <h2 class="section-title">Delivery & Reservation Information</h2>
+        <p class="section-subtitle">Bringing the taste of Italy to your doorstep</p>
+
+        <div class="info-content">
+
+           <h3>Busines Number - Reservation & Delivery</h3>
+          <p>Call us at <a href="tel:705-555-5555"><strong>705-555-555</strong></a> to either reserve a table <strong>at least a week in advance</strong> or order over the phone instead of online.</p>
+        
+
+          <h3>Delivery Area & Fees</h3>
+          <p>We proudly deliver to the entire<strong> Barrie area</strong>!</p>
+          <p>A flat delivery fee of <strong>$3.00</strong> applies to all orders. Enjoy <strong>FREE delivery</strong>
+            for orders over $30.00.</p>
+
+          <h3>Delivery Hours</h3>
+          <p>Our service is available from <strong>11:00 AM to 10:00 PM, Monday through Sunday</strong>. Please place
+            your orders at least 30 minutes before closing time.</p>
+        
+         
+          
+          </div>
+      </div>
+    </section>
+
+    <section id="online-ordering" class="order-section">
+      <div class="container">
+        <h2 class="section-title">Place Your Order</h2>
+        <p class="section-subtitle">Customize your authentic pizza and get it delivered fresh</p>
+
+        <div class="progress-bar-container">
+          <div class="progress-step current-step" data-step="1">1. Info</div>
+          <div class="progress-step" data-step="2">2. Pizza</div>
+          <div class="progress-step" data-step="3">3. Add-ons</div>
+          <div class="progress-step" data-step="4">4. Summary</div>
+          <div class="progress-line"></div>
+        </div>
+
+        <form class="order-form" action="/submit-order" method="POST">
+
+          <fieldset>
+            <legend>Personal & Delivery Information</legend>
+            <div class="form-columns">
+              <div class="left-column">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Johnny Marinelli">
+
+                <!--FIX PHONE NUMBER-->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required maxlength="12" pattern="[0-9]{3}[- ]?[0-9]{3}[- ]?[0-9]{4}" title="Phone number must be 10 digits (e.g., 555-555-1234)" placeholder="555-555-5555" >
+              </div>
+
+              <div class="right-column">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" placeholder="133 bang ding ow Lane">
+
+                <label for="delivery-time">Preferred Delivery Time:</label>
+                <input type="time" id="delivery-time" name="delivery-time" min="11:00" max="22:00" required>
+              </div>
+            </div>
+
+            <label for="instructions">Special Instructions (e.g., apartment number, dietary notes, contact-free)</label>
+            <textarea id="instructions" name="instructions" rows="3"></textarea>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Choose Your Pizza</legend>
+            <label for="pizza">Pizza Type:</label>
+            <select id="pizza" name="pizza[]" multiple required>
+              <option value="margherita">Margherita</option>
+              <option value="diavola">Diavola</option>
+              <option value="quattro-formaggi">Quattro Formaggi</option>
+              <option value="capricciosa">Capricciosa</option>
+              <option value="prosciutto-rucola">Prosciutto e Rucola</option>
+            </select>
+
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+              <option value="">-- Select Size --</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+
+            <!--FIX BELOW FOR SELECT-->
+            <label>Extra Toppings:</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="extras" value="extra-cheese"> Extra Cheese</label>
+              <label><input type="checkbox" name="extras" value="mushrooms"> Mushrooms</label>
+              <label><input type="checkbox" name="extras" value="olives"> Olives</label>
+              <label><input type="checkbox" name="extras" value="anchovies"> Anchovies</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Add-ons & Drinks</legend>
+            <label for="drinks">Beverages:</label>
+            <select id="drinks" name="drinks[]" multiple>
+              <option value="pepsi">Pepsi</option>
+              <option value="aquafina">Aquafina</option>
+              <option value="sanpellegrino">San Pellegrino</option>
+              <option value="iced-tea">Iced Tea</option>
+              <option value="lemonade">Lemonade</option>
+            </select>
+          </fieldset>
+
+          <section id="orderSummary" class="order-summary">
+            <h3 class="section-title">Order Summary</h3>
+            <p class="section-subtitle">Final review before payment</p>
+            <div class="info-content">
+              <p>Total items: <span>(Calculated dynamically)</span></p>
+              <p>Subtotal: <span>(Calculated dynamically)</span></p>
+              <p>Delivery Fee: <span>$3.00</span></p>
+              <h4>Grand Total: <span>(Calculated dynamically)</span></h4>
+            </div>
+          </section>
+
+          <button type="submit" class="submit-button">Place Order</button>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p><small>&copy; 2025 Enzo's Pizzeria. All rights reserved.</small></p>
+      <p><small><a href="tel:705-555-5555">705-555-5555</a> | <a
+            href="mailto:EnzoMarinelli@hotmail.com">EnzoMarinelli@hotmail.com</a></small></p>
+      <p><small>127 Gerard Way, Barrie, ON, Z4P 0OW</small></p>
+    </div>
+  </footer>
+</body>
+
+</html>

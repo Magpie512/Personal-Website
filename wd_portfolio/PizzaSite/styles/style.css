@@ -1,0 +1,1055 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  :root {
+    /* CSS Variables (custom properties) */
+    /* found out abt it a few assignments ago */
+    --light-red: #f33151d2;
+    --light-green: #8cffb2;
+    --white: #fef9f3;
+    --dark: #2c1810;
+    --gold: #d4af37;
+    --light-gray: #f5f5f5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--white);
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--dark);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .logo {
+    /*wanna make it stick but not the header*/
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .nav-links a:hover {
+    color: var(--gold);
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 1rem;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .hero {
+    overflow-y: hidden;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1000"><rect fill="%23c8102e" width="2000" height="1000"/><circle fill="%23f4a460" cx="1000" cy="500" r="300"/><circle fill="%23d4722a" cx="1000" cy="500" r="280"/><circle fill="%23fef9f3" cx="1000" cy="500" r="260"/><ellipse fill="%23c8102e" cx="900" cy="450" rx="50" ry="40"/><ellipse fill="%23c8102e" cx="1100" cy="480" rx="45" ry="35"/><ellipse fill="%23c8102e" cx="1000" cy="550" rx="40" ry="35"/><circle fill="%23008c45" cx="950" cy="520" r="25"/><circle fill="%23008c45" cx="1050" cy="470" r="20"/><circle fill="%23008c45" cx="1020" cy="600" r="22"/></svg>');
+    /* AI above, I admit */
+    background-size: cover;
+    background-position: center;
+    background-size: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .null {
+    padding: 0;
+    margin: 0;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+  }
+
+  .caption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+  }
+
+  .familyPhoto {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .story-hero {
+    overflow-y: hidden;
+    padding-top: 140px;
+    /* to offset fixed header */
+    height: 20vh;
+    background-color: var(--light-red);
+    /*url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1000"><rect fill="%23c8102e" width="2000" height="1000"/><circle fill="%23f4a460" cx="1000" cy="500" r="300"/><circle fill="%23d4722a" cx="1000" cy="500" r="280"/><circle fill="%23fef9f3" cx="1000" cy="500" r="260"/><ellipse fill="%23c8102e" cx="900" cy="450" rx="50" ry="40"/><ellipse fill="%23c8102e" cx="1100" cy="480" rx="45" ry="35"/><ellipse fill="%23c8102e" cx="1000" cy="550" rx="40" ry="35"/><circle fill="%23008c45" cx="950" cy="520" r="25"/><circle fill="%23008c45" cx="1050" cy="470" r="20"/><circle fill="%23008c45" cx="1020" cy="600" r="22"/></svg>');*/
+    background-size: cover;
+    background-position: center;
+    background-size: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .story-hero {
+    overflow-y: hidden;
+    padding-top: 140px;
+    height: 20vh;
+    background: linear-gradient(135deg, var(--light-red) 0%, #bd2222 100%);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+  }
+
+  .tagline {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .fancy-font {
+    font-family: 'sacramento', cursive;
+    color: var(--gold);
+  }
+
+  .cta-button {
+    /* CTA, i have learned, means Call To Action */
+    /* feels like when i learned about impulse isle */
+    display: inline-block;
+    background-color: var(--light-red);
+    /*had a hold over. changed from primary color to light red */
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(200, 16, 46, 0.4);
+  }
+
+  .cta-button:hover {
+    background-color: var(--gold);
+    box-shadow: 0 6px 20px rgba(200, 16, 46, 0.6);
+    transform: translateY(-3px);
+  }
+
+  section {
+    padding: 6rem 0;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--dark);
+    position: relative;
+  }
+
+  .section-title::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--light-green), var(--light-red), var(--gold));
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+
+  #menu-classic,
+  #menu-beverages,
+  #menu-desserts,
+  #online-ordering,
+  #delivery-info {
+    scroll-margin-top: 60px;
+  }
+
+  .menu-section {
+    background-color: var(--white);
+    /*I wanted to make this green so bad but it looks TERRIBLE*/
+    /* then again it is a really old italian man website so idk*/
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    overflow: visible;
+    /*god this took me forever to figure out*/
+  }
+
+  .menu-item {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
+
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .menu-item-corner-image {
+    opacity: 50%;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: auto;
+    z-index: 1;
+    transform: rotate(15deg);
+    pointer-events: none;
+  }
+
+  .menu-item:hover {
+    transform: translate(3px, -5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .menu-item:hover .menu-item-corner-image {
+    transform: translateY(-5px) scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .menu-item.featured {
+    border: 2px solid var(--gold);
+    background: linear-gradient(135deg, #fff 0%, #fef9f3 100%);
+  }
+
+  .menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    border-bottom: 2px dotted var(--light-red);
+    padding-bottom: 0.5rem;
+  }
+
+  .menu-item h3 {
+    font-size: 1.5rem;
+    color: var(--dark);
+  }
+
+  .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--light-red);
+  }
+
+  .ingredients {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-section {
+    background: linear-gradient(135deg, var(--light-green) 0%, #038f4e 100%);
+    color: white;
+    padding-bottom: 0;
+  }
+
+  .about-section .section-title {
+    color: white;
+  }
+
+  .about-section .section-title::after {
+    background: linear-gradient(to right, var(--gold), white, var(--primary-color));
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .feature {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+  }
+
+  .feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-section {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+
+  .contact-info p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .reservation-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+
+  .reservation-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .reservation-form input,
+  .reservation-form select {
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .reservation-form input:focus,
+  .reservation-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+
+  .submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .submit-button:hover {
+    background-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+  }
+
+  footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  fieldset {
+    border: none;
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  legend {
+    border-left: 5px solid var(--light-red);
+    padding-left: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--light-red);
+  }
+
+  .order-form fieldset+fieldset {
+    margin-top: 2rem;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(to right, var(--light-green), var(--light-red), var(--gold)) 1;
+  }
+
+  .checkbox-group label {
+    background-color: var(--light-gray);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkbox-group input[type="checkbox"]:checked+label {
+    background-color: var(--light-red);
+    color: white;
+  }
+
+  .submit-button {
+    margin: 10px auto;
+    background-color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+    }
+
+    70% {
+      box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+  }
+
+  .order-form .form-columns {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-column label,
+  .right-column label {
+    margin-top: 1rem;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .reviews-section {
+    background-color: var(--light-gray);
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3.5rem;
+    margin-top: 4rem;
+  }
+
+  .review-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--light-red);
+  }
+
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .reviewer-name {
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin-bottom: 0.25rem;
+  }
+
+  .review-date {  
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  .star-rating {
+    color: #838383;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .star.gold {
+    color: var(--gold);
+  }
+
+  .review-text {
+    overflow-y: hidden;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    font-style: italic;
+    quotes: "“" "”" "‘" "’";
+  }
+
+  .review-text::before {
+    content: open-quote;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    color: var(--light-red);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .review-text::after {
+    content: close-quote;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+    color: var(--light-red);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .review-text::before {
+    content: open-quote;
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    color: var(--light-red);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .verified-purchase {
+    font-size: 0.85rem;
+    color: var(--light-red);
+    font-weight: 700;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+#delivery-info {
+    padding-top: 140px; 
+    padding-bottom: 3rem;
+    scroll-margin-top: 60px; 
+}
+
+#online-ordering {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    background-color: var(--light-gray);
+    scroll-margin-top: 60px;
+}
+
+#delivery-info h3 {
+    font-size: 1.6rem;
+    color: var(--dark);
+    margin-top: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.order-form input:not([type="checkbox"]),
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--dark);
+    background-color: var(--white);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 1rem;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    outline: none;
+    border-color: var(--light-red);
+    box-shadow: 0 0 5px rgba(243, 49, 81, 0.3);
+}
+
+.order-form label {
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+    display: block;
+}
+
+.order-form .form-columns {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.order-form .left-column,
+.order-form .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group label {
+    display: inline-block; 
+}
+
+.order-summary {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    background-color: var(--white); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary .section-title {
+    font-size: 2rem;
+    color: var(--light-red);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.order-summary .section-title::after {
+    content: none;
+}
+
+.order-summary .section-subtitle {
+    margin-bottom: 1.5rem;
+}
+
+.order-summary .info-content p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    border-bottom: 1px dotted #aaa;
+    padding: 0.5rem 0;
+}
+
+.order-summary .info-content h4 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 2px solid var(--dark);
+    text-align: right;
+}
+
+.order-form > .submit-button {
+    display: block;
+    width: 50%;
+    margin: 3rem auto 0;
+    padding: 1.5rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .order-form .form-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .order-form > .submit-button {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
+
+#delivery-info {
+    padding-top: 140px; 
+    padding-bottom: 3rem;
+    scroll-margin-top: 60px;
+}
+
+#online-ordering {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    background-color: var(--light-gray);
+    scroll-margin-top: 60px;
+}
+
+#delivery-info h3 {
+    font-size: 1.6rem;
+    color: var(--dark);
+    margin-top: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.order-form input:not([type="checkbox"]),
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--dark);
+    background-color: var(--white);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 1rem;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    outline: none;
+    border-color: var(--light-red);
+    box-shadow: 0 0 5px rgba(243, 49, 81, 0.3);
+}
+
+.order-form label {
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+    display: block;
+}
+
+.order-form .form-columns {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.order-form .left-column,
+.order-form .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group label {
+    display: inline-block; 
+}
+
+.order-summary {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary .section-title {
+    font-size: 2rem;
+    color: var(--light-red);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.order-summary .section-title::after {
+    content: none;
+}
+
+.order-summary .section-subtitle {
+    margin-bottom: 1.5rem;
+}
+
+.order-summary .info-content p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    border-bottom: 1px dotted #aaa;
+    padding: 0.5rem 0;
+}
+
+.order-summary .info-content h4 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 2px solid var(--dark);
+    text-align: right;
+}
+
+.progress-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0 3rem;
+    margin-bottom: 2rem;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    background-color: #ddd;
+    z-index: 1;
+    margin: 0 10%; 
+}
+
+.progress-step {
+    position: relative;
+    z-index: 2;
+    width: 25%;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #888;
+    cursor: default;
+}
+
+.progress-step::before {
+    content: attr(data-step);
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto 0.5rem;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #fff;
+    border: 2px solid #ddd;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.progress-step.current-step {
+    color: var(--dark);
+}
+
+.progress-step.current-step::before {
+    background-color: var(--light-red);
+    border-color: var(--light-red);
+    color: var(--white);
+}
+
+.progress-step.completed::before {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+}
+
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ddd;
+}
+
+.step-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.step-button.primary {
+    background-color: var(--light-red);
+    color: var(--white);
+    border: 2px solid var(--light-red);
+}
+
+.step-button.primary:hover {
+    background-color: #d82b45;
+}
+
+.step-button.secondary {
+    background-color: var(--white);
+    color: var(--dark);
+    border: 2px solid #ccc;
+}
+
+.step-button.secondary:hover {
+    background-color: var(--light-gray);
+    border-color: #999;
+}
+
+.order-form fieldset,
+.order-summary,
+.submit-button {
+    display: none; 
+}
+
+.order-form > .submit-button {
+    display: block;
+    width: 50%;
+    margin: 3rem auto 0;
+    padding: 1.5rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .order-form .form-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .order-form > .submit-button {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
