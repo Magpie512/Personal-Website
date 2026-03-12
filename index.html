@@ -5,221 +5,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Portfolio website of Amara 'Mars' Briggs, a junior software developer.">
+    <meta name="description"
+        content="Professional portfolio of Amara 'Mars' Briggs, a software developer specializing in web architecture and robotics.">
     <meta name="author" content="Mars Briggs">
-    <meta name="keywords" content="Mars Briggs, Mars Briggs, Software Developer, Portfolio, Web Developer, Junior Developer">
+    <meta name="keywords"
+        content="Mars Briggs, Software Engineering, Web Development, Robotics, Python, Java, Georgian College">
 
-    <title>Mars Briggs</title>
+    <title>Mars Briggs | Software Developer</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <!-- ========== HEADER / NAVIGATION ========== -->
     <header>
-        <nav>
+        <nav aria-label="Main Navigation">
             <div class="nav-links">
                 <a href="#faceCard">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <!-- <a href="#testimonials">Testimonials</a> -->
                 <a href="#tools">Technologies</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- ========== HERO SECTION ========== -->
         <section id="faceCard" class="hero">
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="accent-line"></div>
                     <h1>Hey, I'm <span id="mars-trigger" class="clickable-mars">Mars</span></h1>
-                    <p class="pronouns">They/He/She</p>
-                    <p class="subtitle"> Junior Software Developer</p>
+                    <p class="pronouns">They / He / She</p>
+                    <p class="subtitle">Software Developer & Robotics Mentor</p>
 
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/amara-briggs-baab28398/" target="_blank"
+                        <a href="https://www.linkedin.com/in/amara-briggs-baab28398/" target="_blank" rel="noopener"
                             aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Magpie512" target="_blank" aria-label="GitHub"><i
+                        <a href="https://github.com/Magpie512" target="_blank" rel="noopener" aria-label="GitHub"><i
                                 class="fab fa-github"></i></a>
                         <a href="mailto:marsbriggs512@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="documents/resume.pdf" target="_blank" aria-label="Resume"><i class="fas fa-file-alt"></i></a>  
+                        <a href="documents/resume.pdf" target="_blank" rel="noopener" aria-label="View Resume"><i
+                                class="fas fa-file-alt"></i></a>
                     </div>
                 </div>
 
                 <div class="hero-image">
                     <div class="image-frame">
-                        <img src="img/profile_picture.png" alt="Amara &quot;Mars&quot; Briggs">
+                        <img src="img/profile_picture.png" alt="Amara Briggs profile portrait">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== ABOUT ME SECTION ========== -->
         <section id="about" class="about-me">
             <div class="about-container">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <p>Hello! I'm <strong>Amara Iona Briggs</strong>, though all my friends call me
-                        <strong>Mars</strong>. I'm a passionate junior software developer who loves creating innovative,
-                        user-centered solutions.
+                    <p>I am <strong>Amara Iona Briggs</strong> (Mars), a software developer focused on engineering
+                        user-centric applications and hardware integrations. Currently pursuing Computer Programming at
+                        Georgian College, I bridge the gap between robust back-end logic and intuitive front-end design.
                     </p>
 
-                    <p>With a background in computer science and a genuine enthusiasm for problem-solving, I specialize
-                        in building web applications that seamlessly blend functionality with elegant design. I'm
-                        constantly learning and staying current with emerging technologies.</p>
+                    <p>My technical approach is rooted in curiosity and passion, whether I am optimizing web
+                        performance, studying new frameworks or mentoring the next generation of engineers through
+                        robotics outreach.</p>
 
-                    <p>Beyond coding, I volunteer with my schools robotics club and I have a "pet" robot named Robert. He
-                        is a <a
-                            href="https://www.sunfounder.com/collections/robot-kit-for-arduino-raspberry-pi/products/picrawler-robot-kit"
-                            target="_blank" rel="noopener noreferrer">picrawler from SunFounder</a>.</p>
+                    <p>When I'm not writing code, I serve as a part-time mentor for <strong>Grizzly Gears (FRC Team
+                            9580)</strong>, helping students navigate the complexities of Java and mechanical systems. I
+                        also maintain a specialized "Pi-Crawler" hardware project, exploring the intersection of Python
+                        and robotics.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ========== LINKEDIN BLOG =============
-
-        -->
-
-        <!-- ========== PROJECTS SECTION ========== -->
         <section id="projects" class="projects">
             <div class="projects-container">
-                <h2>Projects</h2>
+                <h2>Featured Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/GrizzyGearsLogo.png" alt="Grizzly Gears Project">
-                        </div>
+
+                    <article class="project-card">
+                        <figure class="project-image">
+                            <img src="img/GrizzyGearsLogo.png" alt="Grizzly Gears Robotics Logo">
+                        </figure>
                         <div class="project-info">
-                            <h3>Grizzly Gears</h3>
+                            <h3>Grizzly Gears Robotics</h3>
                             <p class="project-date">Nov 2025 - Present</p>
-                            <p>A Student Mentor with Georgian College's highschool outreach program</p>
+                            <p>Serving as a technical mentor for high school outreach, providing guidance on Java-based
+                                control systems and vision tracking using Lime Light.</p>
                             <div class="project-tags">
-                                <span>Java, Python, C#</span>
-                                <span>Lime Light</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">Mentorship</span>
                             </div>
-                            <a href="https://www.instagram.com/grizzly_gears9580/https://www.instagram.com/grizzly_gears9580/" class="project-link">View Project →</a>
+                            <a href="https://www.instagram.com/grizzly_gears9580/" class="project-link" target="_blank"
+                                rel="noopener">View Outreach →</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/Calculator.png" alt="Calculator Project">
-                        </div>
+                    <article class="project-card">
+                        <figure class="project-image">
+                            <img src="https://placebear.com/400/400" alt="Focus Assist Project Visualization">
+                        </figure>
                         <div class="project-info">
-                            <h3>Calculator</h3>
-                            <p class="project-date">Jan 2026</p>
-                            <p>A simple calculator application built with Python</p>
-                            <div class="project-tags">
-                                <span>Python</span>
-                            </div>
-                            <a href="https://github.com/Magpie512/Calculator" class="project-link">View Project →</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://placebear.com/400/400" alt="Facial Recognition Project">
-                        </div>
-                        <div class="project-info">
-                            <h3>Study Assistant</h3>
+                            <h3>Focus Assist AI</h3>
                             <p class="project-date">March 2026</p>
-                            <p>A project to get me to sit up and pay attention</p>
+                            <p>An intelligent study aid utilizing OpenCV and TensorFlow to monitor engagement levels and
+                                promote healthy ergonomic habits during long coding sessions.</p>
                             <div class="project-tags">
-                                <span>Python</span>
-                                <span>OpenCV</span>
-                                <span>TensorFlow</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">TensorFlow</span>
                             </div>
-                            <a href="https://github.com/Magpie512/Focus-Assist" class="project-link">View Project →</a>
+                            <a href="https://github.com/Magpie512/Focus-Assist" class="project-link" target="_blank"
+                                rel="noopener">Source Code →</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/trollpost.png" alt="TrollPost Project">
-                        </div>
+                    <article class="project-card">
+                        <figure class="project-image">
+                            <img src="img/WebDev.png" alt="UI/UX Web Collection Preview">
+                        </figure>
                         <div class="project-info">
-                            <h3>TrollPost</h3>
-                            <p class="project-date">Feb 2026</p>
-                            <p>"What if D&D had a myspace?"</p>
+                            <h3>Web UI/UX Architecture</h3>
+                            <p class="project-date">Ongoing</p>
+                            <p>A specialized collection of web design projects focusing on responsive designs, API
+                                management, and modern CSS.</p>
                             <div class="project-tags">
-                                <span>HTML5, CSS3, JavaScript</span>
-                                <span>PHP</span>
-                                <span>MySQL</span>
+                                <span class="tag">React</span>
+                                <span class="tag">API Design</span>
+                                <span class="tag">CSS3</span>
                             </div>
-                            <a href="https://github.com/Magpie512/TrollPost" class="project-link">View Project →</a>
+                            <a href="wd_portfolio/webportfolio.htm" class="project-link">View Collection →</a>
                         </div>
-                    </div>
-                                        <div class="project-card">
-                        <div class="project-image">
-                            <img src="img/WebDev.png" alt="Web Dev Projects">
-                        </div>
-                        <div class="project-info">
-                            <h3>School Projects</h3>
-                            <p class="project-date">Various</p>
-                            <p>Incase my school work can vouch for me</p>
-                            <div class="project-tags">
-                                <span>HTML5, CSS3, JavaScript</span>
-                            </div>
-                            <a href="wd_portfolio/webportfolio.htm" class="project-link">View Project →</a>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-    <!-- ====== TESTIMONIALS ======== -->
-
-    <!-- <section id="testimonials" class="testimonials">
-            <h2>Testimonials</h2>
-            <div class="testimonial-card">
-                <p>"Mars is an exceptional developer with a keen eye for detail. Their dedication and creativity are truly impressive."</p>
-                <span>- Baby Jane Doe, Senior Developer</span>
-            </div>
-    </section> -->
-
-        <!-- ========= TOOLS ============ -->
         <section id="tools" class="tools">
             <div class="tools-container">
-                <h2>Technologies</h2>
+                <h2>Technologies & Tooling</h2>
                 <div class="tools-grid">
-
-                    <!-- =================== SYSTEMS =======================-->
-                    <div class="tool-item"><i class="fab fa-windows"></i></div>
-                    <div class="tool-item"><i class="fab fa-linux"></i></div>
-
-                    <!-- =================== WEB TECHNOLOGIES ===================== -->
-                    <div class="tool-item"><i class="fab fa-html5"></i></div>
-                    <div class="tool-item"><i class="fab fa-css3-alt"></i></div>
-                    <div class="tool-item"><i class="fab fa-js"></i></div>
-                    <div class="tool-item"><i class="fab fa-php"></i></div>
-                    <div class="tool-item"><i class="fab fa-react"></i></div>
-
-                    <!-- =================== PROGRAMMING LANGUAGES ===================== -->
-                    <div class="tool-item"><i class="fab fa-c"></i></div>
-                    <div class="tool-item"><i class="fab fa-python"></i></div>
-                    <div class="tool-item"><i class="fab fa-java"></i></div>
-    
-                    <!-- =================== FRAMEWORKS & TOOLS ===================== -->
-                    <div class="tool-item"><i class="fab fa-docker"></i></div>
-                    <div class="tool-item"><i class="fab fa-github"></i></div>
-                    <div class="tool-item"><i class="fas fa-database"></i></div>
+                    <div class="tool-item" title="Windows"><i class="fab fa-windows"></i></div>
+                    <div class="tool-item" title="Linux"><i class="fab fa-linux"></i></div>
+                    <div class="tool-item" title="HTML5"><i class="fab fa-html5"></i></div>
+                    <div class="tool-item" title="CSS3"><i class="fab fa-css3-alt"></i></div>
+                    <div class="tool-item" title="JavaScript"><i class="fab fa-js"></i></div>
+                    <div class="tool-item" title="PHP"><i class="fab fa-php"></i></div>
+                    <div class="tool-item" title="React"><i class="fab fa-react"></i></div>
+                    <div class="tool-item" title="C#"><i class="fab fa-c"></i></div>
+                    <div class="tool-item" title="Python"><i class="fab fa-python"></i></div>
+                    <div class="tool-item" title="Java"><i class="fab fa-java"></i></div>
+                    <div class="tool-item" title="Docker"><i class="fab fa-docker"></i></div>
+                    <div class="tool-item" title="GitHub"><i class="fab fa-github"></i></div>
+                    <div class="tool-item" title="Databases/SQL"><i class="fas fa-database"></i></div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ========== FOOTER ========== -->
     <footer>
-        <p>&copy; 2026 Amara Briggs. All rights reserved.</p>
+        <p>&copy; 2026 Amara Briggs. Built with precision and caffeine.</p>
     </footer>
 
-    <!-- ========== EASTER EGG MODAL ========== -->
-    <div id="mars-modal" class="mars-modal">
+    <div id="mars-modal" class="mars-modal" aria-hidden="true">
         <div class="mars-container">
             <div class="mars-planet">
                 <div class="mars-surface"></div>
