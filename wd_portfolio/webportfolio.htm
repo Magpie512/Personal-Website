@@ -5,75 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Dev Portfolio | Mars Briggs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
 </head>
 
 <body>
 
-    <a href="../index.html" class="back-button">← Back</a>
+    <nav aria-label="Main Navigation">
+        <a href="../index.html" class="back-button" title="Return to home page">← Back</a>
+    </nav>
 
     <header>
-        <h1>Web Design Collection</h1>
-        <p>An archive of my favourite web design projects.</p>
+        <div class="header-content">
+            <h1>Web Design Collection</h1>
+            <p>An archive of specialized projects focusing on responsive architecture and interactive UI.</p>
+        </div>
     </header>
 
     <main class="container">
         <div class="portfolio-grid">
-            <a href="Retro Site/index.html">
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="Retro Site/image.png"
-                            alt="Project covering a retro-themed website design covering a retro-themed product.">
-                    </div>
-                    <div class="project-info">
-                        <h3>Retro Product Advert</h3>
-                        <p>Brief summary of the design goals and the final outcome of the build.</p>
-                        <div class="tag-container">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag"> JS </span>
-                        </div>
-                    </div>
-                </article>
-            </a>
-
-            <a href="PizzaSite/index.html">
+            
             <article class="project-card">
-                <div class="project-image">
-                    <img src="PizzaSite/image.png" alt="A project showing a modern take on a family owned pizza website">
-                </div>
+                <figure class="project-image">
+                    <img src="Retro Site/image.png" alt="Retro-themed product landing page with vintage typography">
+                </figure>
                 <div class="project-info">
-                    <h3>Pizza Restaurant</h3>
-                    <p>A modern take on a classic Italian pizzeria design.</p>
-                    <p><span> AI imaging used</span></p>
-                    <div class="tag-container">
-                        <span class="tag">HTML</span>
+                    <h3><a href="Retro Site/index.html">Retro Product Advert</a></h3>
+                    <p>Exploration of mid-century aesthetics applied to modern web standards, focusing on color theory and grid layouts.</p>
+                    <footer class="tag-container">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </footer>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <figure class="project-image">
+                    <img src="PizzaSite/image.png" alt="Modern Italian pizzeria interface">
+                </figure>
+                <div class="project-info">
+                    <h3><a href="PizzaSite/index.html">Pizza Restaurant</a></h3>
+                    <p>A high-fidelity prototype for a family-owned pizzeria featuring optimized image assets and menu navigation.</p>
+                    <footer class="tag-container">
+                        <span class="tag">UI/UX</span>
                         <span class="tag">CSS</span>
-                        <span class="tag">JS</span>
-                    </div>
+                        <span class="tag">AI Assets</span>
+                    </footer>
                 </div>
             </article>
-            </a>
 
-            <a href="assignment-2/womans-day.html">
             <article class="project-card">
-                <div class="project-image">
-                    <img src="assignment-2/image.png" alt="A womans day magazine recreation showing a dynamic and responsive layout.">
-                </div>
+                <figure class="project-image">
+                    <img src="assignment-2/image.png" alt="Dynamic magazine layout recreation">
+                </figure>
                 <div class="project-info">
-                    <h3>Magazine Recreation</h3>
-                    <p>A recreation of a women's day magazine.</p>
-                    <div class="tag-container">
-                        <span class="tag">Dynamic/Responsive Layout</span>
+                    <h3><a href="assignment-2/womans-day.html">Magazine Recreation</a></h3>
+                    <p>Technical exercise in complex CSS Grid positioning to replicate high-density print media in a browser environment.</p>
+                    <footer class="tag-container">
+                        <span class="tag">CSS Grid</span>
                         <span class="tag">Placebear API</span>
-                    </div>
+                    </footer>
                 </div>
             </article>
-            </a>
+
+            <article class="project-card">
+                <figure class="project-image">
+                    <img src="../img/marsflix.png" alt="Marsflix streaming application interface" />
+                </figure>
+                <div class="project-info">
+                    <h3><a href="https://marsflix.netlify.app" target="_blank" rel="noopener">Marsflix</a></h3>
+                    <p>Dynamic movie database application utilizing RESTful APIs for real-time data fetching and state management.</p>
+                    <footer class="tag-container">
+                        <span class="tag">ReactJS</span>
+                        <span class="tag">API Integration</span>
+                    </footer>
+                </div>
+            </article>
 
         </div>
     </main>
 
 </body>
-
 </html>
