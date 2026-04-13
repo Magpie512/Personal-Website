@@ -143,20 +143,8 @@ main {
      border: 4px solid var(--primary-color);
      border-radius: 8px;
      overflow: hidden;
-     width: 400px;
-     height: 500px;
-}
-
-.image-frame::before {
-     content: '';
-     position: absolute;
-     top: -10px;
-     left: -10px;
-     right: -10px;
-     bottom: -10px;
-     border: 2px solid var(--primary-color);
-     border-radius: 8px;
-     z-index: -1;
+     width: 600px;
+     height: 800px;
 }
 
 .image-frame img {
