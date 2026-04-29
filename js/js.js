@@ -1,6 +1,6 @@
 class FootElement extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `<footer><p>&copy; 2026 Amara Briggs. Built with dedication and love.</p></footer>`;
+        this.innerHTML = `<footer><p>&copy; 2026 Amara Briggs. Built with dedication and care for the craft.</p></footer>`;
     }
 }
 customElements.define('main-footer', FootElement);
