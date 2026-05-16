@@ -2,197 +2,307 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description"
-        content="Professional portfolio of Amara 'Mars' Briggs, a software developer specializing in web architecture and robotics.">
-    <meta name="author" content="Mars Briggs">
-    <meta name="keywords"
-        content="Mars Briggs, Software Engineering, Web Development, Robotics, Python, Java, Georgian College">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description"
+    content="Portfolio of Amara 'Mars' Briggs — software developer, robotics mentor, game design hobbyist.">
+  <meta name="author" content="Mars Briggs">
+  <meta name="keywords"
+    content="Mars Briggs, Software Engineering, Web Development, Robotics, Python, Java, Georgian College">
 
-    <title>Mars Briggs | Software Developer</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="js/js.js" async defer></script>
+  <title>Mars Briggs | Software Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <script type="module" src="js/tegaki-init.js" defer></script>
+  <script src="js/js.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav aria-label="Main Navigation">
-            <div class="nav-links">
-                <a href="#faceCard">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#tools">Technologies</a>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section id="faceCard" class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="accent-line"></div>
-                    <h1>Hey, I'm <span id="mars-trigger" class="clickable-mars">Mars</span></h1>
-                    <p class="pronouns">any pronouns</p>
-                    <p class="subtitle">Software Developer, Game Design Hobbyist, FRC Mentor</p>
+  <!-- ── Scroll Progress ───────────────────────────────────────── -->
+  <div id="scroll-progress" aria-hidden="true"></div>
 
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/amara-briggs-baab28398/" target="_blank" rel="noopener"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Magpie512" target="_blank" rel="noopener" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
-                        <a href="mailto:marsbriggs512@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
+  <!-- ── Navigation ──────────────────────────────────────────────── -->
+  <header id="site-header">
+    <a class="logo" href="#hero" aria-label="Home">MB</a>
+    <nav aria-label="Main Navigation">
+      <a href="#about" data-nav="about"><span>01</span> About</a>
+      <a href="#projects" data-nav="projects"><span>02</span> Projects</a>
+      <a href="#tools" data-nav="tools"><span>03</span> Stack</a>
+    </nav>
+    <a class="nav-cta" href="mailto:marsbriggs512@gmail.com">Say Hello ↗</a>
+  </header>
 
-                <div class="hero-image">
-                    <div class="image-frame">
-                        <img src="img/profile.png" alt="Amara Briggs profile portrait">
-                    </div>
-                </div>
-            </div>
-        </section>
+  <main>
 
-        <section id="about">
-            <div class="about-container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <p>I am <strong>Amara Iona Briggs</strong> (Mars), a software developer focused on engineering
-                        user-centric applications and hardware integrations. Currently pursuing Computer Programming at
-                        Georgian College, I bridge the gap between robust back-end logic and intuitive front-end design.
-                    </p>
+    <!-- ── Hero ──────────────────────────────────────────────────── -->
+    <section id="hero">
+      <canvas id="starfield" aria-hidden="true"></canvas>
 
-                    <p>My technical approach is rooted in curiosity and passion, whether I am optimizing web
-                        performance, studying new frameworks or mentoring the next generation of engineers through
-                        robotics outreach.</p>
-
-                    <p>When I'm not writing code, I serve as a part-time mentor for <strong>Grizzly Gears (FRC Team
-                            9580)</strong>, helping students navigate the complexities of Java and mechanical systems. I
-                        also maintain a specialized "Pi-Crawler" hardware project, exploring the intersection of Python
-                        and robotics.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="projects-container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-
-                    <article class="project-card">
-                        <figure class="project-image">
-                            <img src="img/GrizzyGearsLogo.png" alt="Grizzly Gears Robotics Logo">
-                        </figure>
-                        <div class="project-info">
-                            <h3>Grizzly Gears Robotics</h3>
-                            <p class="project-date">Nov 2025 - Present</p>
-                            <p>Serving as a programming mentor for high school outreach, providing guidance on
-                                Java-based
-                                control systems and vision tracking using Lime Light.</p>
-                            <div class="project-tags">
-                                <span class="tag">Java</span>
-                                <span class="tag">Computer Vision</span>
-                                <span class="tag">Mentorship</span>
-                            </div>
-                            <a href="https://www.instagram.com/grizzly_gears9580/" class="project-link" target="_blank"
-                                rel="noopener">View Outreach</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <figure class="project-image">
-                            <img src="https://placebear.com/400/400" alt="Focus Assist Project Visualization">
-                        </figure>
-                        <div class="project-info">
-                            <h3>Focus Assist AI</h3>
-                            <p class="project-date">March 2026</p>
-                            <p>An intelligent and comedic study aid utilizing OpenCV and TensorFlow to monitor
-                                engagement levels and
-                                promote healthy ergonomic habits during long coding sessions.</p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">OpenCV</span>
-                                <span class="tag">TensorFlow</span>
-                            </div>
-                            <a href="https://github.com/Magpie512/Focus-Assist" class="project-link" target="_blank"
-                                rel="noopener">Source Code</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <figure class="project-image">
-                            <img src="img/trollpost.png" alt="Trollpost Project Visualization">
-                        </figure>
-                        <div class="project-info">
-                            <h3>Trollpost Fantasy Social Media</h3>
-                            <p class="project-date">April 2026</p>
-                            <p>A social media that came from a thought, "What if D&D had a myspace".</p>
-                            <div class="project-tags">
-                                <span class="tag">PHP</span>
-                                <span class="tag">API Design</span>
-                                <span class="tag">MySQL</span>
-                            </div>
-                            <a href="webdev.htm" class="project-link">View Project</a>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <figure class="project-image">
-                            <img src="img/PhoenixRising.png" alt="Creative writing project">
-                        </figure>
-                        <div class="project-info">
-                            <h3>Web Design for my Creative Writing</h3>
-                            <p class="project-date">March 2026</p>
-                            <p>A web design project to showcase my creative writing and my web design skills. Seriously, check this one out!</p>
-                            <div class="project-tags">
-                                <span class="tag">HTML5, CSS3, JavaScript</span>
-                                <span class="tag">Ergonomic Design</span>
-                                <span class="tag">Web Design</span>
-                            </div>
-                            <a href="https://phoenixrisingbook.vercel.app/" class="project-link" target="_blank"
-                                rel="noopener">Website</a>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="tools" class="tools">
-            <div class="tools-container">
-                <h2>Technologies & Tooling</h2>
-                <div class="tools-grid">
-                    <div class="tool-item" title="Windows"><i class="fab fa-windows"></i></div>
-                    <div class="tool-item" title="Linux"><i class="fab fa-linux"></i></div>
-                    <div class="tool-item" title="HTML5"><i class="fab fa-html5"></i></div>
-                    <div class="tool-item" title="CSS3"><i class="fab fa-css3-alt"></i></div>
-                    <div class="tool-item" title="JavaScript"><i class="fab fa-js"></i></div>
-                    <div class="tool-item" title="PHP"><i class="fab fa-php"></i></div>
-                    <div class="tool-item" title="React"><i class="fab fa-react"></i></div>
-                    <div class="tool-item" title="C#"><i class="fab fa-c"></i></div>
-                    <div class="tool-item" title="Python"><i class="fab fa-python"></i></div>
-                    <div class="tool-item" title="Java"><i class="fab fa-java"></i></div>
-                    <div class="tool-item" title="Docker"><i class="fab fa-docker"></i></div>
-                    <div class="tool-item" title="GitHub"><i class="fab fa-github"></i></div>
-                    <div class="tool-item" title="Databases/SQL"><i class="fas fa-database"></i></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <main-footer></main-footer>
-
-    <div id="mars-modal" class="mars-modal" aria-hidden="true">
-        <div class="mars-container">
-            <div class="mars-planet">
-                <div class="mars-surface"></div>
-            </div>
-            <div class="stars"></div>
+      <div class="hero-inner">
+        <div class="hero-label">
+          <span class="dot"></span>
+          Available for opportunities
         </div>
-    </div>
-</body>
 
+        <div class="hero-name-block">
+          <p class="hero-hey">Hey, I'm</p>
+          <h1>
+            <tegaki-renderer id="mars-trigger" smoothing speed="0.8" aria-label="Mars">
+              Mars
+            </tegaki-renderer>
+          </h1>
+          <p class="hero-pronouns">any pronouns</p>
+        </div>
+
+        <p class="hero-tagline">
+          Software Developer &nbsp;·&nbsp; Game Design Hobbyist &nbsp;·&nbsp; FRC Mentor
+        </p>
+
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/amara-briggs-baab28398/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Magpie512" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:marsbriggs512@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+
+      <!-- Decorative orbit rings -->
+      <div class="orbit orbit-1" aria-hidden="true"></div>
+      <div class="orbit orbit-2" aria-hidden="true"></div>
+    </section>
+
+    <!-- ── About ─────────────────────────────────────────────────── -->
+    <section id="about">
+      <div class="section-label">
+        <span class="section-num">01</span>
+        <span>About Me</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-quote">
+          <p>Bridging&nbsp;the gap between robust&nbsp;back&#8209;end&nbsp;logic and intuitive front&#8209;end&nbsp;design.</p>
+        </div>
+
+        <div class="about-body">
+          <p>I am <strong>Amara Iona Briggs</strong> (Mars), a software developer focused on engineering
+            user-centric applications and hardware integrations. Currently pursuing Computer Programming at
+            Georgian College, I care deeply about the intersection of clean architecture and delightful experience.</p>
+
+          <p>My technical approach is rooted in curiosity and passion — whether optimising web
+            performance, exploring new frameworks, or mentoring the next generation of engineers through
+            robotics outreach.</p>
+
+          <p>Outside of code, I serve as a part-time mentor for <strong>Grizzly Gears (FRC Team
+              9580)</strong>, helping students navigate Java and mechanical systems. I also maintain
+            a specialised <strong>Pi-Crawler</strong> hardware project, exploring the intersection
+            of Python and robotics.</p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">4+</span>
+              <span class="stat-label">Projects shipped</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">FRC</span>
+              <span class="stat-label">Robotics mentor</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">13+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <figure class="about-photo">
+          <img src="img/Profile.png" alt="Amara Briggs profile portrait">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ── Projects ──────────────────────────────────────────────── -->
+    <section id="projects">
+      <div class="section-label">
+        <span class="section-num">02</span>
+        <span>Featured Projects</span>
+      </div>
+
+      <div class="projects-bento">
+
+        <!-- Card 1: Grizzly Gears — large -->
+        <article class="card card-large" data-index="01">
+          <div class="card-bg" style="--card-img: url('../img/GrizzyGearsLogo.png')"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-num">01</span>
+              <span class="card-date">Nov 2025 – Present</span>
+            </div>
+            <h3>Grizzly Gears Robotics</h3>
+            <p>Programming mentor for high school outreach, guiding Java-based control systems and
+              computer vision using Lime Light.</p>
+            <div class="card-tags">
+              <span>Java</span>
+              <span>Computer Vision</span>
+              <span>Mentorship</span>
+            </div>
+            <a href="https://www.instagram.com/grizzly_gears9580/" target="_blank" rel="noopener" class="card-link">
+              View Outreach <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Focus Assist -->
+        <article class="card" data-index="02">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-num">02</span>
+              <span class="card-date">March 2026</span>
+            </div>
+            <h3>Focus Assist AI</h3>
+            <p>An intelligent and comedic study aid using OpenCV and TensorFlow to monitor engagement
+              and promote healthy ergonomic habits during coding sessions.</p>
+            <div class="card-tags">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>TensorFlow</span>
+            </div>
+            <a href="https://github.com/Magpie512/Focus-Assist" target="_blank" rel="noopener" class="card-link">
+              Source Code <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Trollpost -->
+        <article class="card" data-index="03">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-num">03</span>
+              <span class="card-date">April 2026</span>
+            </div>
+            <h3>Trollpost Fantasy Social</h3>
+            <p>A social media platform born from the question, "What if D&amp;D had a MySpace?"</p>
+            <div class="card-tags">
+              <span>PHP</span>
+              <span>API Design</span>
+              <span>MySQL</span>
+            </div>
+            <a href="webdev.htm" class="card-link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4: Phoenix Rising — wide -->
+        <article class="card card-wide" data-index="04">
+          <div class="card-bg" style="--card-img: url('../img/PhoenixRising.png')"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-num">04</span>
+              <span class="card-date">March 2026</span>
+            </div>
+            <h3>Phoenix Rising — Web Design for Creative Writing</h3>
+            <p>A web design project showcasing creative writing alongside considered design. Seriously, check this one out!</p>
+            <div class="card-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="https://phoenixrisingbook.vercel.app/" target="_blank" rel="noopener" class="card-link">
+              Visit Website <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── Technologies ───────────────────────────────────────────── -->
+    <section id="tools">
+      <div class="section-label">
+        <span class="section-num">03</span>
+        <span>Technologies &amp; Tooling</span>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-category">
+          <h3>Languages</h3>
+          <div class="tool-chips">
+            <div class="chip" title="Python"><i class="fab fa-python"></i> Python</div>
+            <div class="chip" title="Java"><i class="fab fa-java"></i> Java</div>
+            <div class="chip" title="JavaScript"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="chip" title="PHP"><i class="fab fa-php"></i> PHP</div>
+            <div class="chip" title="C#"><i class="fab fa-c"></i> C#</div>
+          </div>
+        </div>
+
+        <div class="tool-category">
+          <h3>Frontend</h3>
+          <div class="tool-chips">
+            <div class="chip" title="HTML5"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="chip" title="CSS3"><i class="fab fa-css3-alt"></i> CSS3</div>
+            <div class="chip" title="React"><i class="fab fa-react"></i> React</div>
+          </div>
+        </div>
+
+        <div class="tool-category">
+          <h3>Infrastructure</h3>
+          <div class="tool-chips">
+            <div class="chip" title="Docker"><i class="fab fa-docker"></i> Docker</div>
+            <div class="chip" title="GitHub"><i class="fab fa-github"></i> GitHub</div>
+            <div class="chip" title="Databases"><i class="fas fa-database"></i> SQL</div>
+            <div class="chip" title="Linux"><i class="fab fa-linux"></i> Linux</div>
+            <div class="chip" title="Windows"><i class="fab fa-windows"></i> Windows</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────── -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <p class="footer-name">Mars Briggs</p>
+      <p class="footer-copy">&copy; 2026 Amara Briggs. Built with dedication and care for the craft.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/amara-briggs-baab28398/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Magpie512" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:marsbriggs512@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mars Easter Egg ──────────────────────────────────────────── -->
+  <div id="mars-modal" aria-hidden="true">
+    <div class="mars-container">
+      <div class="mars-planet">
+        <div class="mars-surface"></div>
+      </div>
+      <p class="mars-label">You found Mars.</p>
+      <div class="stars"></div>
+    </div>
+  </div>
+
+</body>
 </html>
