@@ -3,8 +3,10 @@ import caveat from 'https://esm.sh/tegaki/fonts/caveat';
 
 registerTegakiElement();
 
-window.addEventListener('DOMContentLoaded', () => {
+addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('tegaki-renderer').forEach(el => {
         el.font = caveat;
+        const s = el.getAttribute('data-size');
+        if (s) el.style.fontSize = s;
     });
 });

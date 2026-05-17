@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description"
-        content="Portfolio of Amara 'Mars' Briggs — software developer, robotics mentor, game design hobbyist.">
+    <meta name="description" content="Portfolio of Amara 'Mars' Briggs — software developer, robotics mentor, game design hobbyist.">
     <meta name="author" content="Mars Briggs">
-    <meta name="keywords"
-        content="Mars Briggs, Software Engineering, Web Development, Robotics, Python, Java, Georgian College">
-
+    <meta name="keywords" content="Mars Briggs, Software Engineering, Web Development, Robotics, Python, Java, Georgian College">
     <title>Mars Briggs | Software Developer</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
-
     <script type="module" src="js/tegaki.js" defer></script>
     <script src="js/js.js" defer></script>
 </head>
-
-<!DOCTYPE html>
-<html lang="en">
-
 <body>
-
     <header>
-        <h1>MB</h1>
+        <a class="logo" href="#hero">MB</a>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -42,43 +29,179 @@
     </header>
 
     <main>
-<div class="hero">
-    <div class="hero-text">
-        <h2>
-            <tegaki-renderer smoothing speed="4" aria-label="Mars Briggs">
-                Mars Briggs
-            </tegaki-renderer>
-        </h2>
-        <p class="hero-tagline"> Software Developer &nbsp;·&nbsp; Game Design Hobbyist &nbsp;·&nbsp; FRC Mentor
-        </p>
-        <div class="hero-links">
-            <a href="https://www.linkedin.com/in/amara-briggs-baab28398/" target="_blank" rel="noopener"
-                aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/Magpie512" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </a>
-            <a href="mailto:marsbriggs512@gmail.com" aria-label="Email">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-            </a>
-        </div>
-    </div>
-    
-    <div class="hero-image">
-        <img src="img/Profile.png" alt="Mars Briggs">
-    </div>
-</div>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>
+<tegaki-renderer smoothing speed="4" aria-label="Mars Briggs">Mars Briggs</tegaki-renderer>
+                    </h1>
+                    <p class="hero-tagline">Software Developer &nbsp;·&nbsp; Game Design Hobbyist &nbsp;·&nbsp; FRC Mentor</p>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/marsbriggs512/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Magpie512" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:marsbriggs512@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/Profile.png" alt="Mars Briggs">
+                </div>
+            </div>
+        </section>
 
+        <section id="about">
+            <div class="section-label">
+                <span>About Me</span>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am <strong>Amara Iona Briggs</strong> (Mars), a software developer focused on engineering user-centric applications and hardware integrations. Currently pursuing Computer Programming at Georgian College, I care deeply about the intersection of clean architecture and delightful experience.</p>
+                    <p>My technical approach is rooted in curiosity and passion — whether optimising web performance, exploring new frameworks, or mentoring the next generation of engineers through robotics outreach.</p>
+                    <p>Outside of code, I serve as a part-time mentor for <strong>Grizzly Gears (FRC Team 9580)</strong>, helping students navigate Java and mechanical systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-label">
+                <span>Featured Projects</span>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/GrizzyGearsLogo.png" alt="Grizzly Gears Robotics">
+                    </div>
+                    <div class="project-content">
+                        <h3>Grizzly Gears Robotics</h3>
+                        <p>Programming mentor for high school outreach, guiding Java-based control systems and computer vision using Lime Light.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Computer Vision</span>
+                            <span>Mentorship</span>
+                        </div>
+                        <a href="https://www.instagram.com/grizzly_gears9580/" target="_blank" rel="noopener">View Outreach <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Focus Assist AI</h3>
+                        <p>An intelligent and comedic study aid using OpenCV and TensorFlow to monitor engagement and promote healthy ergonomic habits during coding sessions.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>TensorFlow</span>
+                        </div>
+                        <a href="https://github.com/Magpie512/Focus-Assist" target="_blank" rel="noopener">Source Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/trollpost.png" alt="Trollpost Fantasy Social">
+                    </div>
+                    <div class="project-content">
+                        <h3>Trollpost Fantasy Social</h3>
+                        <p>A social media platform born from the question, "What if D&amp;D had a MySpace?"</p>
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>API Design</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="#">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/PhoenixRising.png" alt="Phoenix Rising">
+                    </div>
+                    <div class="project-content">
+                        <h3>Phoenix Rising</h3>
+                        <p>A web design project showcasing creative writing alongside considered design.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://phoenixrisingbook.vercel.app/" target="_blank" rel="noopener">Visit Website <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="img/Marsflix.png" alt="Marsflix">
+                    </div>
+                    <div class="project-content">
+                        <h3>Marsflix</h3>
+                        <p>Web Design PROOF OF CONCEPT for a video streaming platform.</p>
+                        <div class="project-tags">
+                            <span>API</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                        <a href="https://marsflix.netlify.app/" target="_blank" rel="noopener">Visit Website <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="stack">
+            <div class="section-label">
+                <span>Technologies &amp; Tooling</span>
+            </div>
+            <div class="stack-grid">
+                <div class="stack-category">
+                    <h3>Languages</h3>
+                    <div class="stack-items">
+                        <div class="stack-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="stack-item"><i class="fab fa-java"></i> Java</div>
+                        <div class="stack-item"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="stack-item"><i class="fab fa-php"></i> PHP</div>
+                        <div class="stack-item">C#</div>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h3>Frontend</h3>
+                    <div class="stack-items">
+                        <div class="stack-item"><i class="fab fa-html5"></i> HTML5</div>
+                        <div class="stack-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                        <div class="stack-item"><i class="fab fa-react"></i> React</div>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h3>Infrastructure</h3>
+                    <div class="stack-items">
+                        <div class="stack-item"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="stack-item"><i class="fab fa-github"></i> GitHub</div>
+                        <div class="stack-item"><i class="fas fa-database"></i> SQL</div>
+                        <div class="stack-item"><i class="fab fa-linux"></i> Linux</div>
+                        <div class="stack-item"><i class="fab fa-windows"></i> Windows</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        &#169; <span id="thisyear"></span> Mars Briggs
+        <p>&copy; <span id="thisyear"></span> Mars Briggs</p>
+        <p>Made with meticulous care and dedication</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/marsbriggs512/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/MarsBriggs" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </footer>
-
 </body>
-
 </html>
