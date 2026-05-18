@@ -355,7 +355,7 @@ footer {
     color: var(--bg-secondary);
     text-align: center;
     padding: 2rem;
-    font-size: 1.25rem;
+    font-size: 0.8rem;
 }
 
 .footer-links a {
@@ -363,8 +363,8 @@ footer {
     text-decoration: none;
     transition: color 0.3s ease;
     /* size */
-    font-size: 1.25rem;
-    margin-left: 1rem;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
 }
 
 .footer-links a:hover {
