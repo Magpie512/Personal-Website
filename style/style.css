@@ -119,11 +119,11 @@ section {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr minmax(0, 400px);
     gap: 4rem;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -138,7 +138,7 @@ section {
 
 .hero-text h1 {
     display: flex;
-    justify-content: center; /* centers the auto-sized tegaki element */
+    justify-content: center;
 }
 
 .handwritten {
@@ -152,7 +152,7 @@ section {
     overflow: hidden;
     animation: writeOn 2s ease-out forwards;
 }
- 
+
 .handwritten::before {
     content: 'Mars Briggs';
     position: absolute;
@@ -164,7 +164,7 @@ section {
     color: var(--text-primary);
     animation: reveal 2s ease-out forwards;
 }
- 
+
 @keyframes reveal {
     to {
         width: 100%;
@@ -210,7 +210,7 @@ section {
 
 .hero-image img {
     width: 100%;
-    max-width: 450px;
+    max-width: 220px;  /* was 320px */
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
@@ -377,55 +377,31 @@ footer {
 }
 
 .footer-links a {
-    color: var(--bg-secondary); /* Soft white to match footer text */
+    color: var(--bg-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
-    /* size */
     font-size: 0.9rem;
     margin-left: 0.5rem;
 }
 
 .footer-links a:hover {
-    color: var(--accent); /* Changes to theme orange on hover */
+    color: var(--accent);
 }
 
-@media (max-width: 992px) {
+/* ── Responsive ────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        grid-template-columns: 1fr minmax(0, 280px);
+        gap: 2.5rem;
+        max-width: 860px;
     }
 
-    tegaki-renderer {
-        font-size: 3.5rem;
+    .hero-image img {
+        max-width: 240px;
     }
 
-    .hero-image {
-        order: -1;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 1rem 1.5rem;
-    }
-
-    nav {
-        gap: 1.5rem;
-    }
-
-    nav a {
-        font-size: 0.85rem;
-    }
-
-    section {
-        padding: 3rem 1.5rem;
-    }
-
-    tegaki-renderer {
+    .handwritten {
         font-size: 2.5rem;
     }
 
@@ -433,22 +409,101 @@ footer {
         font-size: 1rem;
     }
 
-    .stack-grid {
-        grid-template-columns: 1fr;
+    .hero-links a {
+        padding: 0.6rem 1.1rem;
+        font-size: 0.85rem;
     }
+
+    section {
+        padding: 3.5rem 1.75rem;
+    }
+
+    header {
+        padding: 1rem 1.75rem;
+    }
+
+    nav {
+        gap: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .stack-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+.project-image {
+    height: 140px;
 }
 
-@media (max-width: 576px) {
+.project-content {
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.1rem;
+}
+
+.project-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.project-tags span {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+}
+.stack-category h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.stack-item {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.78rem;
+    gap: 0.4rem;
+}
+
+.stack-item i {
+    font-size: 0.95rem;
+}
+
+.stack-items {
+    gap: 0.5rem;
+}
+
+.stack-grid {
+    gap: 1.25rem;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+}
+}
+
+@media (max-width: 480px) {
     .logo {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 
     nav a {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
+    }
+
+    nav {
+        gap: 1rem;
     }
 
     tegaki-renderer {
         font-size: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 200  px;
     }
 
     .hero-links {
@@ -458,8 +513,48 @@ footer {
     .hero-links a {
         justify-content: center;
     }
+}
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+/* ── Dark mode ─────────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a1917;
+        --bg-secondary: #212019;
+        --bg-tertiary: #2a2826;
+        --text-primary: #f0ede8;
+        --text-secondary: #a8a49f;
+        --text-tertiary: #6e6b67;
+        --accent: #e0885a;
+        --accent-hover: #d4763c;
+        --border-light: #333129;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    header {
+        background-color: rgba(26, 25, 23, 0.95);
+    }
+
+    header {
+        background-color: rgba(26, 25, 23, 0.95);
+    }
+
+    .project-card {
+        background-color: var(--bg-secondary);
+    }
+
+    .stack-item {
+        background-color: var(--bg-secondary);
+    }
+
+    footer {
+        background-color: #0d0d0c;
+        color: var(--text-tertiary);
+    }
+
+    .footer-links a {
+        color: var(--text-tertiary);
     }
 }
