@@ -148,6 +148,11 @@ tegaki-renderer {
     line-height: 1.1;
     color: var(--text-primary);
 }
+
+tegaki-renderer:not(:defined) {
+    visibility: hidden;
+}
+
 .hero-tagline {
     font-size: 1.1rem;
     color: var(--text-secondary);
