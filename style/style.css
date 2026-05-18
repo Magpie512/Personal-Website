@@ -141,16 +141,34 @@ section {
     justify-content: center; /* centers the auto-sized tegaki element */
 }
 
-tegaki-renderer {
-    display: block;
+.handwritten {
+    font-family: 'Caveat', cursive;
     font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.1;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
     color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: writeOn 2s ease-out forwards;
 }
-
-tegaki-renderer:not(:defined) {
-    visibility: hidden;
+ 
+.handwritten::before {
+    content: 'Mars Briggs';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--text-primary);
+    animation: reveal 2s ease-out forwards;
+}
+ 
+@keyframes reveal {
+    to {
+        width: 100%;
+    }
 }
 
 .hero-tagline {
