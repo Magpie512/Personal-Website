@@ -210,7 +210,7 @@ section {
 
 .hero-image img {
     width: 100%;
-    max-width: 220px;  /* was 320px */
+    max-width: 320px;
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
