@@ -225,7 +225,7 @@ section {
 
 .hero-image img {
     width: 100%;
-    max-width: 320px;
+    max-width: 450px;
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
